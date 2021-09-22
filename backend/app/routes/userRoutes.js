@@ -11,7 +11,7 @@ router
     .route('/update/:rollNo')
     .patch(userController.updateUser)
 router
-    .route('/delete')
+    .route('/delete/:rollNo')
     .delete(userController.remove)
 router
     .route('/profile/:rollNo')
