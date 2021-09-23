@@ -7,7 +7,7 @@ class SignUp extends Component {
     }
     render(){
         return(
-           <h1>Hello There!</h1>
+           
         )
     }
 }

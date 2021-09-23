@@ -1,7 +1,7 @@
 #container {
     align-items: center;
     padding: 10px;
-    background: center/cover no-repeat url("../../../public/left.jpg");
+    background: center/cover no-repeat url("../assets/left.jpg");
     height: 700px;
     color: cornsilk;
 }
@@ -12,7 +12,7 @@
     font-family: cursive;
 }
 #logo{
-    background: center/cover no-repeat url("../../../public/student-logo.jpg");
+    background: center/cover no-repeat url("../assets/student-logo.jpg");
     height: 135px;
     width: 135px;
     margin-left: 640px;

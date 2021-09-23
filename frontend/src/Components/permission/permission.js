@@ -15,10 +15,10 @@ class Permission extends Component {
                     This app would like to view and manage your details
                 </h1>
                 <p>This app will use this information in accordance with their respective terms of service and privacy policies.</p>
-                <br>
+                <br />
                 <div id="buttons">
-                    <input type="button" value="Cancel" id="can">
-                    <input type="button" value="Accept" id="acc">
+                    <input type="button" value="Cancel" id="can" />
+                    <input type="button" value="Accept" id="acc" />
                 </div>
             </div>
         )

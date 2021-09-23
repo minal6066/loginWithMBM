@@ -13,11 +13,11 @@ class Login extends Component {
                 <h1 id="head"> Log in</h1>
                 <div id="logo"></div>
                 <div id="details">
-                    Roll Number <input type="text" id="name" placeholder="Enter your roll number">
-                    <br>
-                    Password <input type="password" id="pass" placeholder="Enter your password">
-                    <br>
-                    <input type="button" value="LOGIN" id="button">
+                    Roll Number <input type="text" id="name" placeholder="Enter your roll number" />
+                    <br />
+                    Password <input type="password" id="pass" placeholder="Enter your password" />
+                    <br />
+                    <input type="button" value="LOGIN" id="button" />
                 </div>
             </div>
         )

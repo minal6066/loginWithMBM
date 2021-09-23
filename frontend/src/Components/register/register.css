@@ -1,7 +1,7 @@
 #container{
     display: flex;
     flex-direction: row;
-    background: center/cover no-repeat url("../../../public/bg3.jpg");
+    background: center/cover no-repeat url("../assets/bg3.jpg");
     height: 750px;
     /* z-index: -1;
     opacity: 0.8; */
@@ -9,7 +9,7 @@
 #left {
     display: flex;
     flex-direction: column;
-    background: center/cover no-repeat url("../../../public/left.jpg");
+    background: center/cover no-repeat url("../assets/left.jpg");
     margin-top: 40px;
     height: 670px;
     width: 450px;
@@ -35,7 +35,7 @@ p{
     font-family:cursive ;
 }
 #logo {
-    background: center/cover no-repeat url("../../../public/mbm-logo.png");
+    background: center/cover no-repeat url("../assets/mbm-logo.png");
     height: 150px;
     width: 150px;
     margin-left: 150px;

@@ -1,13 +1,13 @@
 #container {
     align-items: center;
     padding: 10px;
-    background: center/cover no-repeat url("../../../public/bg2.jpg");
+    background: center/cover no-repeat url("../assets/bg2.jpg");
     height: 700px;
     color: rgb(6, 3, 10);
 }
 
 #logo {
-    background: center/cover no-repeat url("../../../public/mbm-logo.png");
+    background: center/cover no-repeat url("../assets/mbm-logo.png");
     height: 150px;
     width: 150px;
     margin-left: 650px;
