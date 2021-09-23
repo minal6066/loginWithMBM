@@ -1,4 +1,4 @@
-#container{
+.container{
     display: flex;
     flex-direction: row;
     background: center/cover no-repeat url("../assets/bg3.jpg");
@@ -6,7 +6,7 @@
     /* z-index: -1;
     opacity: 0.8; */
 }
-#left {
+.left {
     display: flex;
     flex-direction: column;
     background: center/cover no-repeat url("../assets/left.jpg");
@@ -18,23 +18,24 @@
     /* opacity: 1;
     z-index: 0; */
 }
-#details{
+.details{
     display: flex;
     flex-direction: column;
     /* margin-top: 20px; */
 }
-#head{
+.head{
     margin-top: 40px;
     margin-left: 90px;
     font-family: cursive;
     font-size: 70px;
 }
-p{
-    font-size: 30px;
+.para{
+    font-size: 25px;
     padding: 35px;
     font-family:cursive ;
+    margin-left: 20px;
 }
-#logo {
+.logo {
     background: center/cover no-repeat url("../assets/mbm-logo.png");
     height: 150px;
     width: 150px;
@@ -42,7 +43,7 @@ p{
     /* padding-top: 50px; */
     border-radius: 50%;
 }
-#right{
+.right{
     display: flex;
     flex-direction: column;
     margin-top: 40px;
@@ -51,14 +52,14 @@ p{
     height: 670px;
     width: 900px;
 }
-#head-2{
+.head-2{
     margin-top: 30px;
     margin-left: 220px;
     font-family: cursive;
     font-size: 50px;
     
 }
-#item{
+.item{
     margin-left: 90px;
     margin-top: 15px;
     font-size: 20px ;
@@ -70,7 +71,7 @@ p{
     width: 700px;
     text-align: center;
 }
-#button{
+.button{
     border-radius: 16px;
     height: 50px;
     font-size: 20px;
@@ -80,9 +81,9 @@ p{
     width: 175px;
     background-color: rgb(83, 114, 248);
     margin-left: 360px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
-#button:hover{
+.button:hover{
     background-color: rgb(24, 66, 207);
     cursor: pointer;
 }

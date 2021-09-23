@@ -9,16 +9,16 @@ class Permission extends Component {
 
     render() {
         return (
-            <div id="container">
-                <div id="logo"> </div>
-                <h1 id="head">
+            <div className="container2">
+                <div className="logo2"> </div>
+                <h1 className="head1">
                     This app would like to view and manage your details
                 </h1>
-                <p>This app will use this information in accordance with their respective terms of service and privacy policies.</p>
+                <p className="head2">This app will use this information in accordance with their respective terms of service and privacy policies.</p>
                 <br />
-                <div id="buttons">
-                    <input type="button" value="Cancel" id="can" />
-                    <input type="button" value="Accept" id="acc" />
+                <div className="buttons">
+                    <input type="button" value="Cancel" className="can" />
+                    <input type="button" value="Accept" className="acc" />
                 </div>
             </div>
         )

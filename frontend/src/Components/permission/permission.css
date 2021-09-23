@@ -1,4 +1,4 @@
-#container {
+.container2 {
     align-items: center;
     padding: 10px;
     background: center/cover no-repeat url("../assets/bg2.jpg");
@@ -6,7 +6,7 @@
     color: rgb(6, 3, 10);
 }
 
-#logo {
+.logo2 {
     background: center/cover no-repeat url("../assets/mbm-logo.png");
     height: 150px;
     width: 150px;
@@ -16,7 +16,7 @@
     border: 2px solid rgb(233, 194, 86);
 }
 
-#can {
+.can {
     border-radius: 12px;
     height: 50px;
     font-size: 20px;
@@ -30,7 +30,7 @@
     margin-top: 25px; */
 }
 
-#acc {
+.acc {
     border-radius: 12px;
     height: 50px;
     font-size: 20px;
@@ -43,27 +43,27 @@
     /* border : 2px solid blue */
     /* margin-top: 25px; */
 }
-#buttons{
+.buttons{
     margin-left: 900px;
     margin-top: 50px;
 }
-#head{
+.head1{
     margin-top: 40px;
     margin-left: 235px;
     font-family: Arial, Helvetica, sans-serif ;
     font-size: 40px;
 }
-p{
+.head2{
     margin-top: 25px;
     margin-left: 235px;
     font-family: cursive; 
     font-size: 20px;
 }
-#can:hover{
+.can:hover{
     background-color: rgb(247, 246, 199);
     cursor: pointer;
 }
-#acc:hover{
+.acc:hover{
     background-color: rgb(26, 23, 230);
     cursor: pointer;
 }
