@@ -1,4 +1,4 @@
-const userRoutes = require('../routes/index');
+const userRoutes = require('../routes/userRoutes');
 
 module.exports = function (app, passport) {
 

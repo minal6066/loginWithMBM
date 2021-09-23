@@ -22,21 +22,6 @@ exports.addUser = async (req,res,next) => {
             message : "User with this mail already exist"
         })
     }
-    const {user_type, can_detail} = req.body;
-    if(!user_type){
-        res.status(400).json({
-            status: "failure",
-            isSuccess : false,
-            message : "Specify a user type!"
-        })
-    }
-    if(user_type !==1 && user_type !==2){
-        res.status(400).json({
-            status: "failure",
-            isSuccess : false,
-            message : "Not a valid user type"
-        })
-    }
     const user = await User.create(req.body);
     console.log("User created successfully");
     user.password = undefined;
@@ -90,12 +75,19 @@ exports.updateUser = async(req, res, next) => {
         message : 'User updated successfully',
         data : userUpdated,
     })
-
 }
 
 exports.remove = async(req, res, next) => {
-    await User.findByIdAndDelete(req.params.rollNo);
-    res.status(304).json({
+    const user = User.findOne({roll_no : req.params.rollNo});
+    if(!user){
+        res.send(304).json({
+            status: 'failure',
+            isSuccess : false,
+            message: 'User not found!'
+        })
+    }
+    await User.findOneAndDelete({roll_no : req.params.rollNo});
+    res.status(200).json({
         status: 'success',
         isSuccess : true,
         message : 'Account deleted successfully',
@@ -103,9 +95,8 @@ exports.remove = async(req, res, next) => {
 }
 
 exports.profile = async (req,res, next) => {
-    const rollNo = JSON.stringify(req.params.rollNo);
-    console.log(rollNo);
-    const user = User.findOne({'roll_no':rollNo});
+    const rollNo = req.params.rollNo;
+    const user = await User.findOne({roll_no : rollNo});
     user.password = undefined;
     res.status(200).json({
         status : 'success',
