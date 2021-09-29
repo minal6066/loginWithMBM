@@ -3,7 +3,7 @@ class APIManager {
     constructor(props){
         // super(props);
         // var tok = tok ? ls.get('token') : '';
-        // console.log(process.env.REACT_APP_URL, "React URL")
+        console.log(process.env.REACT_APP_URL, "React URL")
         this.axiosInstance = axios.create({
             baseURL : `${process.env.REACT_APP_URL}/`,
             timeout : 10000,
@@ -31,7 +31,7 @@ class APIManager {
         })
     }
 
-    signUp = (params) => {
+    register = (params) => {
         console.log("Inside Sign Up");
         return new Promise((resolve, reject) => {
             this.axiosInstance
