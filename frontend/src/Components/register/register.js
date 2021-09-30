@@ -32,6 +32,7 @@ class Register extends Component {
         APIManager.register(this.state).then((resp) => 
             {
                 if(resp.status === 'success'){
+                    localStorage.setItem('token', resp.token);
                     return console.log("User added successfully");
                 }else{
                     return console.log("Something went wrong!")

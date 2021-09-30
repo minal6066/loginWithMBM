@@ -15,7 +15,10 @@ class Login extends Component {
         APIManager.logIn(this.state).then((resp) =>
             {
                 if(resp.status === 'success')
-                    console.log("User logged in successfully!");
+                    {
+                    localStorage.setItem('token', resp.token);
+                    return console.log("User logged in successfully!");
+                    }
                 else
                     console.log("Something Went Wrong!")
             }
