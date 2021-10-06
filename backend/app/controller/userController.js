@@ -23,7 +23,6 @@ exports.addUser = async (req,res,next) => {
         })
     }
     const user = await User.create(req.body);
-    console.log("User created successfully");
     user.password = undefined;
     const token = signToken(user);
     return res.status(201).json({

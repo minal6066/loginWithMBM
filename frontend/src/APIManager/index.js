@@ -2,8 +2,7 @@ import axios from 'axios';
 class APIManager {
     constructor(props){
         // super(props);
-        var tok = localStorage.get('token') ? localStorage.get('token') : '';
-        console.log(process.env.REACT_APP_URL, "React URL")
+        var tok = localStorage.getItem('token') ? localStorage.getItem('token') : '';
         this.axiosInstance = axios.create({
             baseURL : `http://localhost:3000/`,
             timeout : 10000,
@@ -16,7 +15,6 @@ class APIManager {
     }
 
     logIn = (params) => {
-        console.log("Inside log in");
         return new Promise((resolve, reject) => {
             this.axiosInstance
             .post(
@@ -32,7 +30,6 @@ class APIManager {
     }
 
     register = (params) => {
-        console.log("Inside Sign Up");
         return new Promise((resolve, reject) => {
             this.axiosInstance
             .post(
@@ -47,12 +44,12 @@ class APIManager {
         })
     }
 
-    getProfile = () => {
-        console.log("Inside Get Profile");
+    getProfile = (roll_no) => {
+        console.log("Inside Get Profile", roll_no);
         return new Promise((resolve, reject) => {
             this.axiosInstance
             .get(
-                'user/profile'
+                `user/profile/${roll_no}`
             )
             .then((response) => {
                 resolve(response);

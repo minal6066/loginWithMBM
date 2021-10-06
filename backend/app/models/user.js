@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema(
     {
         id : {type : Schema.ObjectId},
-        can_name : {
+        name : {
             type: Object,
             required: [true, 'Name is a required field']
         },

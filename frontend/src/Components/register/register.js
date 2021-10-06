@@ -31,8 +31,9 @@ class Register extends Component {
         }
         APIManager.register(this.state).then((resp) => 
             {
-                if(resp.status === 'success'){
+                if(resp.status === 200){
                     localStorage.setItem('token', resp.token);
+                    this.props.history.push('/profile')
                     return console.log("User added successfully");
                 }else{
                     return console.log("Something went wrong!")
@@ -57,7 +58,7 @@ class Register extends Component {
                         <input type="text" placeholder="Enter your name" name="name" onChange={(evt) => {this.changeState(evt)}}/>
                         <input type="text" placeholder="Enter your roll no" name="roll_no" onChange={(evt) => {this.changeState(evt)}}/>
                         <input type="email" name="email" placeholder="Enter your email" onChange={(evt) => {this.changeState(evt)}}/>
-                        <input type="number" name="phone" placeholder="Enter your Phone no" onChange={(evt) => {this.changeState(evt)}}/>
+                        <input type="number" name="phone_no" placeholder="Enter your Phone no" onChange={(evt) => {this.changeState(evt)}}/>
                         <input type="password" placeholder="Enter your password" name="password" onChange={(evt) => {this.changeState(evt)}}/>
                         <input type="password" placeholder="Confirm your password" name="confirm_password" onChange={(evt) => {this.changeState(evt)}}/>
                     </div>
