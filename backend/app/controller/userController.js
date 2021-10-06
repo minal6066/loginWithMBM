@@ -103,3 +103,30 @@ exports.profile = async (req,res, next) => {
         data : user,
     })
 }
+
+exports.isAuth = async(req, res, next) => {
+    let token;
+    if(
+        req.headers.authorization &&
+        req.headers.authorization.startsWith('Bearer')
+    ){
+        token = req.headers.authorization.split(' ')[1];
+    }
+    if (!token) {
+        return next(
+            console.log("You are not logged in, please login before using this route")
+        );
+      }
+    const decodedData = await promisify(jwt.verify)(
+    token,
+    process.env.JWT_SECRET
+    );
+    const user = await User.findOne({ _id: decodedData.id});
+    if (!user) {
+        return next(
+          console.log('user belonging to this token does not found', 401)
+        );
+      }
+      req.decodedData = decodedData;
+      next();
+}
