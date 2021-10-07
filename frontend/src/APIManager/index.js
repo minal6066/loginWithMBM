@@ -45,11 +45,21 @@ class APIManager {
     }
 
     getProfile = (roll_no) => {
+        var tok = localStorage.getItem('token') ? localStorage.getItem('token') : '';
+        this.axiosInstance = axios.create({
+            baseURL : `http://localhost:3000/`,
+            timeout : 10000,
+            headers : {
+                'Content-Type' : 'application/json',
+                'Access-Control-Allow-Credentials' : true,
+                "Authorization" : tok ? `Bearer ${tok}` : ''
+            }
+        })
         console.log("Inside Get Profile", roll_no);
         return new Promise((resolve, reject) => {
             this.axiosInstance
             .get(
-                `user/profile/${roll_no}`
+                `user/profile`
             )
             .then((response) => {
                 resolve(response);

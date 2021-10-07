@@ -9,7 +9,7 @@ class Register extends Component {
             name: '',
             roll_no: '',
             email: '',
-            phone: '',
+            phone_no: '',
             password: '',
             confirm_password: ''
         }
@@ -32,9 +32,9 @@ class Register extends Component {
         APIManager.register(this.state).then((resp) => 
             {
                 if(resp.status === 200){
-                    localStorage.setItem('token', resp.token);
+                    localStorage.setItem('token', resp.data.token);
+                    localStorage.setItem('roll_no', resp.data.data.roll_no);
                     this.props.history.push('/profile')
-                    return console.log("User added successfully");
                 }else{
                     return console.log("Something went wrong!")
                 }

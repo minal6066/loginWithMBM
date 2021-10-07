@@ -1,5 +1,6 @@
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
+const { promisify } = require('util');
 
 const signToken = ({ email, _id, user_type }) =>
   jwt.sign({ email, id: _id, user_type }, process.env.JWT_SECRET, {
@@ -25,7 +26,7 @@ exports.addUser = async (req,res,next) => {
     const user = await User.create(req.body);
     user.password = undefined;
     const token = signToken(user);
-    return res.status(201).json({
+    return res.status(200).json({
         status : 'success',
         isSuccess : true,
         token,
@@ -56,11 +57,8 @@ exports.login = async (req, res, next) => {
 };
 
 exports.updateUser = async(req, res, next) => {
-    if(!req.params.rollNo){
-        return console.log("Please provide Roll No");
-    }
-    const user = await User.findOne({roll_no : req.params.rollNo, isDeleted :{$ne : true}});
-    if(!User){
+    const user = await User.findById(req.decodedData.id);
+    if(!user){
         return console.log("Student with this Roll No not found");
     }
     const userUpdated = await User.findByIdAndUpdate(user._id, req.body, {
@@ -77,7 +75,7 @@ exports.updateUser = async(req, res, next) => {
 }
 
 exports.remove = async(req, res, next) => {
-    const user = User.findOne({roll_no : req.params.rollNo});
+    const user = User.findById(req.decodedData.id);
     if(!user){
         res.send(304).json({
             status: 'failure',
@@ -94,8 +92,15 @@ exports.remove = async(req, res, next) => {
 }
 
 exports.profile = async (req,res, next) => {
-    const rollNo = req.params.rollNo;
-    const user = await User.findOne({roll_no : rollNo});
+    console.log(req.decodedData, "Decoded Data")
+    const user = await User.findById(req.decodedData.id);
+    if(!user){
+        res.status(401).json({
+            status: 'fail',
+            isSuccess: true,
+            message: 'User not found!'
+        })
+    }
     user.password = undefined;
     res.status(200).json({
         status : 'success',
