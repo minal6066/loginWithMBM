@@ -8,13 +8,13 @@ router
     .route('/login')
     .post(userController.login)
 router
-    .route('/update/:rollNo')
-    .patch(userController.updateUser)
+    .route('/update')
+    .patch(userController.isAuth, userController.updateUser)
 router
-    .route('/delete/:rollNo')
-    .delete(userController.remove)
+    .route('/delete')
+    .delete(userController.isAuth, userController.remove)
 router
-    .route('/profile/:rollNo')
-    .get(userController.profile)
+    .route('/profile')
+    .get(userController.isAuth, userController.profile)
 
 module.exports = router;

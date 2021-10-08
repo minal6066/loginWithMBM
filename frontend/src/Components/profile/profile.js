@@ -30,10 +30,7 @@ class Profile extends Component {
     APIManager.getProfile(roll_no).then((resp) => {
       const data = resp.data.data;
       this.setState({
-        name: data.name,
-        email: data.email,
-        roll_no: data.roll_no,
-        phone_no: data.phone_no,
+        data,
       });
     });
   };

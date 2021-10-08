@@ -3,17 +3,17 @@ import "./register.css";
 import APIManager from "../../APIManager";
 
 class Register extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "",
-      roll_no: "",
-      email: "",
-      phone: "",
-      password: "",
-      confirm_password: "",
-    };
-  }
+    constructor(props) {
+        super(props);
+        this.state= {
+            name: '',
+            roll_no: '',
+            email: '',
+            phone_no: '',
+            password: '',
+            confirm_password: ''
+        }
+    }
 
   changeState = (evt) => {
     this.setState({
@@ -21,10 +21,25 @@ class Register extends Component {
     });
   };
 
-  register = () => {
-    const { roll_no, password, confirm_password } = this.state;
-    if (!roll_no || !password || !confirm_password) {
-      return console.log("Please add all mandatory fields!");
+    register = () => {
+        const {roll_no, password, confirm_password} = this.state;
+        if(!roll_no || !password || !confirm_password){
+            return console.log("Please add all mandatory fields!")
+        };
+        if(password != confirm_password){
+            return console.log("Password and Confirm Password should match");
+        }
+        APIManager.register(this.state).then((resp) => 
+            {
+                if(resp.status === 200){
+                    localStorage.setItem('token', resp.data.token);
+                    localStorage.setItem('roll_no', resp.data.data.roll_no);
+                    this.props.history.push('/profile')
+                }else{
+                    return console.log("Something went wrong!")
+                }
+            }
+        )
     }
     if (password != confirm_password) {
       return console.log("Password and Confirm Password should match");
