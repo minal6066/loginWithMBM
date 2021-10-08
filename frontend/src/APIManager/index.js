@@ -69,5 +69,30 @@ class APIManager {
             })
         })
     }
+
+    updateProfile = (params) => {
+        var tok = localStorage.getItem('token') ? localStorage.getItem('token') : '';
+        this.axiosInstance = axios.create({
+            baseURL : `http://localhost:3000/`,
+            timeout : 10000,
+            headers : {
+                'Content-Type' : 'application/json',
+                'Access-Control-Allow-Credentials' : true,
+                "Authorization" : tok ? `Bearer ${tok}` : ''
+            }
+        })
+        return new Promise((resolve, reject) => {
+            this.axiosInstance
+            .patch(
+                `user/update`, params
+            )
+            .then((response) => {
+                resolve(response);
+            })
+            .catch(() => {
+                reject();
+            })
+        })
+    }
 }
 export default new APIManager();
