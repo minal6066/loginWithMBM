@@ -41,19 +41,6 @@ class Register extends Component {
             }
         )
     }
-    if (password != confirm_password) {
-      return console.log("Password and Confirm Password should match");
-    }
-    APIManager.register(this.state).then((resp) => {
-      if (resp.status === 200) {
-        localStorage.setItem("token", resp.token);
-        this.props.history.push("/profile");
-        return console.log("User added successfully");
-      } else {
-        return console.log("Something went wrong!");
-      }
-    });
-  };
 
   render() {
     return (
