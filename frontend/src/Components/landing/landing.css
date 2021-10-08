@@ -1,0 +1,89 @@
+body {
+  font-size: 14px;
+  height: auto;
+  background: center/cover no-repeat url("../assets/purple_background.jpg");
+}
+
+.wrapper_landing {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-content_landing {
+  padding: 50px;
+  width: 100%;
+  background-color: #f2f3f8;
+  border-radius: 10px;
+}
+
+#title_landing {
+  margin-top: 0%;
+  font-family: Roboto Slab, "sans-serif";
+  text-align: center;
+  font-size: 40px;
+  color: #042841;
+  font-weight: bolder;
+}
+.logo_mbm_landing {
+  background: center/cover no-repeat url("../assets/mbm-logo.png");
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  margin-left: 45%;
+  margin-bottom: 1%;
+}
+
+#content_landing {
+  margin-top: 0%;
+  font-size: 20px;
+  text-align: center;
+  color: #042841;
+}
+
+.image_landing {
+  width: 100%;
+  height: 400px;
+  margin-top: 35px;
+  background-image: url("../assets/mbm_banner.png");
+}
+
+.image_landing_front {
+  width: 100%;
+  height: 400px;
+  margin-top: 35px;
+  float: inline-end;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.info {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+}
+.left_landing {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40px;
+  height: 400px;
+  width: 500px;
+  font-size: 1.5em;
+  margin-left: 75px;
+  margin-top: 10%;
+}
+
+.right_landing {
+  display: flex;
+  flex-direction: column-reverse;
+  background-image: url("../assets/mbm_front.png");
+  margin-top: 40px;
+  height: 400px;
+  margin-left: 5%;
+  width: 750px;
+}

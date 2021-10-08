@@ -1,68 +1,83 @@
 #container {
-    align-items: center;
-    padding: 10px;
-    background: center/cover no-repeat url("../assets/left.jpg");
-    height: 700px;
-    color: cornsilk;
+  align-items: center;
+  padding: 10px;
+  background: center/cover no-repeat url("../assets/left.jpg");
+  height: 700px;
+  color: cornsilk;
 }
-#head{
-    margin-left: 605px;
-    margin-top: 25px;
-    font-size: 75px;
-    font-family: cursive;
+#head {
+  margin-left: 605px;
+  margin-top: 25px;
+  font-size: 75px;
+  font-family: cursive;
 }
-#logo{
-    background: center/cover no-repeat url("../assets/student-logo.jpg");
-    height: 135px;
-    width: 135px;
-    margin-left: 640px;
-    margin-top: 5px;
-    border-radius: 50%;
-    border: 5px solid rgb(240, 62, 121);
+#logo {
+  background: center/cover no-repeat url("../assets/student-logo.jpg");
+  height: 135px;
+  width: 135px;
+  margin-left: 640px;
+  margin-top: 5px;
+  border-radius: 50%;
+  border: 5px solid rgb(240, 62, 121);
 }
-#details{
-    margin-left: 480px;
-    margin-top: 40px;
-    padding: 10px 10px;
-    font-size: 30px;
-    font-family: cursive;
+#details {
+  margin-left: 480px;
+  margin-top: 40px;
+  padding: 10px 10px;
+  font-size: 30px;
+  font-family: cursive;
 }
-#name{
-    font-size: 20px;
-    padding: 5px;
-    margin-left: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 10px;
-    border: 2px solid rgb(241, 62, 122);
-    background-color: rgb(252, 250, 241);
-    text-decoration: none;
-    font-family: cursive;
+#name {
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  border: 2px solid rgb(241, 62, 122);
+  background-color: rgb(252, 250, 241);
+  text-decoration: none;
+  font-family: cursive;
 }
-#pass{
-    font-size: 20px;
-    padding: 5px;
-    margin-top: 20px;
-    margin-left: 55px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 10px;
-    border: 2px solid rgb(240, 62, 121);
-    background-color: rgb(252, 250, 241);
-    text-decoration: none;
-    font-family: cursive;
+
+#pass {
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 55px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  border: 2px solid rgb(240, 62, 121);
+  background-color: rgb(252, 250, 241);
+  text-decoration: none;
+  font-family: cursive;
 }
-#button{
-    border-radius: 15px;
-    height: 50px;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: cornsilk;
-    padding: 10px;
-    width: 150px;
-    background-color: rgb(240, 62, 121);
-    margin-left: 150px;
-    margin-top: 75px;
+
+#roll_no {
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  border: 2px solid rgb(240, 62, 121);
+  background-color: rgb(252, 250, 241);
+  text-decoration: none;
+  font-family: cursive;
 }
-#button:hover{
-    background-color: blueviolet;
-    cursor: pointer;
+
+#button {
+  border-radius: 15px;
+  height: 50px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: cornsilk;
+  padding: 10px;
+  width: 150px;
+  background-color: rgb(240, 62, 121);
+  margin-left: 150px;
+  margin-top: 75px;
+}
+#button:hover {
+  background-color: blueviolet;
+  cursor: pointer;
 }

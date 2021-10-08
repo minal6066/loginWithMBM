@@ -12,13 +12,13 @@ class SignIn extends Component {
         <div class="main-content">
           <div className="logo_mbm"></div>
           <h1 id="title">SIGN IN</h1>
-          <p>with M.B.M. Engineering College</p>
+          <p id="sub-signin">with M.B.M. Engineering College</p>
           <form action="">
             <div class="input-group">
               <input
                 type="email"
                 placeholder="Email"
-                id="email"
+                id="email_signin"
                 autocomplete="off"
               />
             </div>
@@ -26,13 +26,15 @@ class SignIn extends Component {
               <input
                 type="password"
                 placeholder="Password"
-                id="password"
+                id="password_signin"
                 autocomplete="off"
               />
             </div>
-            <a href="">Create account</a>
+            <a id="link_acc" href="">
+              Create account
+            </a>
             <div class="input-group">
-              <button>Sign up</button>
+              <button className="btn_signup">Sign up</button>
             </div>
           </form>
         </div>
