@@ -92,7 +92,6 @@ exports.remove = async(req, res, next) => {
 }
 
 exports.profile = async (req,res, next) => {
-    console.log(req.decodedData, "Decoded Data")
     const user = await User.findById(req.decodedData.id);
     if(!user){
         res.status(401).json({

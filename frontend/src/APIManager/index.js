@@ -55,7 +55,6 @@ class APIManager {
                 "Authorization" : tok ? `Bearer ${tok}` : ''
             }
         })
-        console.log("Inside Get Profile", roll_no);
         return new Promise((resolve, reject) => {
             this.axiosInstance
             .get(

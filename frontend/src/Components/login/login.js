@@ -14,7 +14,6 @@ class Login extends Component {
   login = () => {
     APIManager.logIn(this.state).then((resp) => {
       if (resp.status === 200) {
-        console.log(resp.token, resp.data.roll_no);
         localStorage.setItem("token", resp.data.token);
         localStorage.setItem("roll_no", resp.data.data.roll_no);
         this.props.history.push("/profile");
