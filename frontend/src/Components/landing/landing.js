@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import "./landing.css";
+import APIManager from "../../APIManager";
 
 class Landing extends Component {
   constructor(props) {
     super(props);
   }
+
+  signInWithMBM = () => {
+    window.location.href="http://localhost:3001/signin?redirectURL=http://localhost:3000&success=/success&failure=/failure"
+  }
+
   render() {
     return (
       <section className="wrapper_landing">
@@ -30,6 +36,7 @@ class Landing extends Component {
           </div>
           <div class="clearfix"></div>
         </div>
+        <button onClick={this.signInWithMBM}>Sign In with MBM!</button>
       </section>
     );
   }

@@ -75,7 +75,7 @@ exports.updateUser = async(req, res, next) => {
 }
 
 exports.remove = async(req, res, next) => {
-    const user = User.findById(req.decodedData.id);
+    const user =await User.findById(req.decodedData.id);
     if(!user){
         res.send(304).json({
             status: 'failure',
@@ -83,7 +83,7 @@ exports.remove = async(req, res, next) => {
             message: 'User not found!'
         })
     }
-    await User.findOneAndDelete({roll_no : req.params.rollNo});
+    await User.findOneAndDelete({roll_no : user.roll_no});
     res.status(200).json({
         status: 'success',
         isSuccess : true,
@@ -133,4 +133,13 @@ exports.isAuth = async(req, res, next) => {
       }
       req.decodedData = decodedData;
       next();
+}
+
+exports.oauthRoute = async(req, res) => {
+    console.log(req.query)
+    // res.redirect("/login")
+    res.writeHead(301,
+        {Location: '/login'}
+      );
+    res.end();
 }

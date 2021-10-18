@@ -9,7 +9,7 @@ class Permission extends Component {
     }
 
     redirect(){
-        console.log("Inside redirect")
+        this.props.history.push()
     }
 
     render() {

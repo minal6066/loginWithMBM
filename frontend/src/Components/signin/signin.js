@@ -2,20 +2,25 @@ import React, { Component } from "react";
 import "./signin.css";
 import APIManager from '../../APIManager';
 import Permission from '../permission/permission'
+// import {useLocation} from "react-router-dom";
 
 class SignIn extends Component {
   constructor(props) {
     super(props);
+    const search = this.props.location.search;
+    const redirectURL= new URLSearchParams(search).get("redirectURL");
+    const success= new URLSearchParams(search).get("success");
+    const failure= new URLSearchParams(search).get("failure");
+    console.log("re", redirectURL, success, failure)
     this.state = {
       roll_no : '',
       password: '',
       showPermission : false,
-      data: ''
+      data: {redirectURL,success, failure }
     }
   }
 
   signUp = (event) => {
-    console.log("This state", this.state)
     APIManager.logIn(this.state).then((resp) => {
       if (resp.status === 200) {
         localStorage.setItem("token", resp.data.token);
@@ -31,6 +36,7 @@ class SignIn extends Component {
     
   }
   render() {
+    console.log("This state", this.state)
     return (
       <>
       {!this.state.showPermission && <section class="wrapper">
@@ -68,7 +74,7 @@ class SignIn extends Component {
       </section>}
       {console.log(this.state.showPermission)}
         {
-          this.state.showPermission && <Permission redirectURL={'https://www.google.com'} data={this.state.data}/>
+          this.state.showPermission && <Permission data={this.state.data}/>
         }
       </>
     );

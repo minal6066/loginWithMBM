@@ -75,6 +75,17 @@ class Profile extends Component {
     });
   };
 
+  deleteUser = () => {
+    alert('Are you sure you want to delete your account?')
+    APIManager.deleteUser().then((resp) => {
+      if(resp.status === 200){
+        localStorage.removeItem('token')
+        localStorage.removeItem('roll_no')
+        this.props.history.push('/login')
+      }
+    }).catch((err) => {console.log("Something went wrong")})
+  }
+
   render() {
     const { name, email, roll_no, phone_no } = this.state;
     return (
@@ -84,7 +95,7 @@ class Profile extends Component {
           <div className="profile_pic"></div>
           <div className="button_profile">
             <FontAwesomeIcon onClick={this.setEdit} id="edit_profile" icon={faPen} />
-            <FontAwesomeIcon id="delete_profile" icon={faTrash} />
+            <FontAwesomeIcon onClick={this.deleteUser} id="delete_profile" icon={faTrash} />
           </div>
           <p className="profile_name">
             <b className="bolds">{!this.state.edit && name}</b>

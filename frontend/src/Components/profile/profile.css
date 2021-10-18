@@ -142,7 +142,7 @@ body {
   justify-content: center;
 }
 
-input {
+.edit_input {
   border-radius: '10px';
   border: '1px solid gray';
   font-size: '2rem';
