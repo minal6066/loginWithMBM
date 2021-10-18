@@ -1,32 +1,32 @@
 # loginWithMBM
 
-Front-End - React.js
-Back-End - Node.js, Express.js, MongoDB
+Front-End - React.js.
+Back-End - Node.js, Express.js, MongoDB.
 
 FILE STRUCTURE -->
-frontend - Holds the client application
-    public - This holds all of our static files
-    src
-        API Manager - This folder contains all the API integrations
+frontend - Holds the client application.
+    public - This holds all of our static files.
+    src.
+        API Manager - This folder contains all the API integrations.
         App-
-            index.js - This is what renders all of our browser routes and different views
-        index.js - This is what renders the react app by rendering App.js, should not change
-        components - This folder holds all of the different components that will make up our views
-            assets - This folder holds assets such as images, docs, and fonts
-        routes - This folder contains the routes mapped with various react components 
-        index.js - This is what renders the react app by rendering App.js, should not change
-    package.json - Defines npm behaviors and packages for the client
-    .gitignore - Tells git which files to ignore
+            index.js - This is what renders all of our browser routes and different views.
+        index.js - This is what renders the react app by rendering App.js, should not change.
+        components - This folder holds all of the different components that will make up our views.
+            assets - This folder holds assets such as images, docs, and fonts.
+        routes - This folder contains the routes mapped with various react components.
+        index.js - This is what renders the react app by rendering App.js, should not change.
+    package.json - Defines npm behaviors and packages for the client.
+    .gitignore - Tells git which files to ignore.
 
-backend - Holds the server application
-    app
-        config - This holds our configuration files, like mongoDB uri
-        controllers - These hold all of the callback functions that each route will call
-        models - This holds all of our data models
-        routes - This holds all of our HTTP to URL path associations for each unique url
-    server.js - Defines npm behaviors and packages for the client
-    package.json - Defines npm behaviors like the scripts defined in the next section of the README
-.gitignore - Tells git which files to ignore
+backend - Holds the server application.
+    app.
+        config - This holds our configuration files, like mongoDB uri.
+        controllers - These hold all of the callback functions that each route will call.
+        models - This holds all of our data models.
+        routes - This holds all of our HTTP to URL path associations for each unique url.
+    server.js - Defines npm behaviors and packages for the client.
+    package.json - Defines npm behaviors like the scripts defined in the next section of the README.
+.gitignore - Tells git which files to ignore.
 README - This file!
 
 To run it locally - 
