@@ -43,7 +43,8 @@ class SignIn extends Component {
         <div class="main-content">
           <div className="logo_mbm"></div>
           <h1 id="title">SIGN IN</h1>
-          <p id="sub-signin">with M.B.M. Engineering College</p>
+          <p className="sub-signin">with </p>
+          <p className="sub-signin">M.B.M. Engineering College</p>
           {/* <form action=""> */}
             <div class="input-group">
               <input

@@ -1,9 +1,48 @@
+*{
+  margin: 0px;
+  
+}
 body {
   font-size: 14px;
   height: auto;
   background: center/cover no-repeat url("../assets/purple_background.jpg");
 }
+#nav{
+  height: 60px;
+  background-color: rgb(43, 101, 226);
+  
+}
+#navlog{
+  margin-left: 1150px;
+  height :40px;
+  width: 120px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-family: cursive;
+  font-size: 20px;
+  /* background-color: rgb(30, 99, 247); */
+  /* color: rgb(212, 167, 255); */
+  /* padding: 8px; */
 
+}
+#navreg{
+  margin-top: 10px;
+  margin-left: 40px;
+  width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  font-family: cursive;
+  font-size: 20px;
+  /* padding: 8px; */
+}
+#navreg:hover{
+  cursor: pointer;
+  background-color: rgb(204, 232, 250);
+}
+#navlog:hover{
+  cursor: pointer;
+  background-color: rgb(204, 232, 250);
+}
 .wrapper_landing {
   margin-top: 50px;
   width: 100%;
