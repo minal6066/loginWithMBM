@@ -4,19 +4,20 @@ import APIManager from '../../APIManager';
 import Permission from '../permission/permission'
 // import {useLocation} from "react-router-dom";
 
+var redirectURL, success, failure;
+
 class SignIn extends Component {
   constructor(props) {
     super(props);
-    const search = this.props.location.search;
-    const redirectURL= new URLSearchParams(search).get("redirectURL");
-    const success= new URLSearchParams(search).get("success");
-    const failure= new URLSearchParams(search).get("failure");
+    var search = this.props.location.search;
+    redirectURL= new URLSearchParams(search).get("redirectURL");
+    success= new URLSearchParams(search).get("success");
+    failure= new URLSearchParams(search).get("failure");
     console.log("re", redirectURL, success, failure)
     this.state = {
       roll_no : '',
       password: '',
       showPermission : false,
-      data: {redirectURL,success, failure }
     }
   }
 
@@ -73,9 +74,8 @@ class SignIn extends Component {
           {/* </form> */}
         </div>
       </section>}
-      {console.log(this.state.showPermission)}
         {
-          this.state.showPermission && <Permission data={this.state.data}/>
+          this.state.showPermission && <Permission redirectURL={redirectURL} success={success} failure={failure} data={this.state.data}/>
         }
       </>
     );

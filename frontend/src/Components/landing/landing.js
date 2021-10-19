@@ -7,17 +7,13 @@ class Landing extends Component {
     super(props);
   }
 
-  signInWithMBM = () => {
-    window.location.href = "http://localhost:3001/signin?redirectURL=http://localhost:3000&success=/success&failure=/failure"
-  }
-
   render() {
     return (
       
       <><div id="nav">
         {/* <p> M.B.M. Engineering College </p> */}
-        <input type="button" value="Login" id="navlog" />
-        <input type="button" value="Register" id="navreg" />
+        <input type="button" onClick={() => this.props.history.push('/login')} value="Login" id="navlog" />
+        <input type="button" onClick={() => this.props.history.push('/register')} value="Register" id="navreg" />
       </div>
       <section className="wrapper_landing">
 
@@ -43,7 +39,6 @@ class Landing extends Component {
             </div>
             <div class="clearfix"></div>
           </div>
-          <button onClick={this.signInWithMBM}>Sign In with MBM!</button>
         </section></> ) 
   }
 }
