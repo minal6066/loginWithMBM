@@ -54,7 +54,7 @@ body {
   cursor: pointer;
 }
 
-#sub-signin {
+.sub-signin {
   margin-top: 2px;
   text-align: center;
 }
