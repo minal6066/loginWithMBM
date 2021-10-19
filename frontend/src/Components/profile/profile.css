@@ -52,6 +52,7 @@ body {
 .profile_name {
   font-size: 30px;
   margin: 4% 0% 0% 4%;
+  text-align: center;
 }
 
 #profile_content {
@@ -143,10 +144,11 @@ body {
 }
 
 .edit_input {
-  border-radius: '10px';
-  border: '1px solid gray';
-  font-size: '2rem';
-  outline: 'none';
-  text-align: 'center';
-  background: '#f2f3f8';
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-size: 1.5rem;
+  outline: none;
+  margin-top: 5px;
+  text-align: center;
+  background: #f2f3f8;
 }
