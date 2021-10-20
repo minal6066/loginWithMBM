@@ -34,6 +34,7 @@
   padding: 35px;
   font-family: cursive;
   margin-left: 20px;
+  margin-top: 20px;
 }
 .logo {
   background: center/cover no-repeat url("../assets/mbm-logo.png");
@@ -42,6 +43,7 @@
   margin-left: 150px;
   /* padding-top: 50px; */
   border-radius: 50%;
+  margin-top: 20px;
 }
 .right {
   display: flex;
